@@ -22,7 +22,7 @@ The package comprise both original open API codes and refactored codes.
 To use original open API code import `open_api` module
 
 ```
-from mobilepayments.open_api import APIContext, APIMethodType, APIRequest
+from mobile_payments.open_api import APIContext, APIMethodType, APIRequest
 ```
 
 To use refactored code import `MPESA` from `vodacom` module.
