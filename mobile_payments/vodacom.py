@@ -87,7 +87,7 @@ class MPESA:
         else:
             return response
 
-    def c2b(self, parameters: dict, path: str = c2bPayment_url) -> dict:
+    def customer2business(self, parameters: dict, path: str = c2bPayment_url) -> dict:
         """A standard customer-to-business transaction
 
         :param parameters: A dictionary containing all necessary
@@ -157,7 +157,7 @@ class MPESA:
         response = self._get_api_response(self.context)
         return response
 
-    def b2c(self, parameters: dict, path: str = b2cPayment_url) -> dict:
+    def business2customer(self, parameters: dict, path: str = b2cPayment_url) -> dict:
         """A standard customer-to-business transaction.
 
         :param parameters: Information required for successful transaction.
@@ -192,7 +192,7 @@ class MPESA:
         response = self._get_api_response(self.context)
         return response
 
-    def b2b(self, parameters: dict, path: str = b2bPayment_url) -> dict:
+    def business2business(self, parameters: dict, path: str = b2bPayment_url) -> dict:
         """Business-to-business transactions (Single Stage).
 
         :param parameters: Information necessary for business-to-business

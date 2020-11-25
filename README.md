@@ -2,7 +2,7 @@
 An easy way to integrate mobile payments into your web project.
 
 ## Motivation
-Recently, VodaCom has released open API portal for M-Pesa. The following are some issue arose:
+Recently, VodaCom has released open API portal for M-Pesa. The following are some issues arose:
 
 For Python integration, they have provided the package in zipped format. It is not user friendly and some developers found it challenging in installation.
 
@@ -13,18 +13,23 @@ Mobile Payments package try to resolve above issues for Python by providing easy
 
 ## Installation
 Install the package using `pip`
-
-`pip install mobile-payments`
+```
+pip install mobile-payments
+```
 
 The package comprise both original open API codes and refactored codes.
 
 To use original open API code import `open_api` module
 
-`from mobilepayments.open_api import APIContext, APIMethodType, APIRequest`
+```
+from mobilepayments.open_api import APIContext, APIMethodType, APIRequest
+```
 
 To use refactored code import `MPESA` from `vodacom` module.
 
-`from mobile_payments.vodacom import MPESA`
+```
+from mobile_payments.vodacom import MPESA
+```
 
 
 ## Prerequisites
@@ -58,7 +63,7 @@ parameters = {
     'input_PurchasedItemsDesc': 'Shoes',
 }
 
-response = m_pesa.c2b(parameters)
+response = m_pesa.customer2business(parameters)
 ```
 
 Sample response
@@ -95,7 +100,7 @@ def payments(request):
                 'input_PurchasedItemsDesc': 'Shoes',
             }
 
-            results = m_pesa.c2b(parameters)
+            results = m_pesa.customer2business(parameters)
 
             if results.body['output_ResponseCode'] == 'INS-0':
                 # successful transaction
