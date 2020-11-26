@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "mobile-payments"
 version = "0.1.2"
-description = "Mobile payments integrations made easy."
+description = "Library for handling mobile payments integrations."
 authors = ["Innocent Zenda <zendainnocent@gmail.com>"]
 readme = 'README.md'
 repository = 'https://github.com/ZendaInnocent/mobile-payments.git'
