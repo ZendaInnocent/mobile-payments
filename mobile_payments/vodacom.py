@@ -5,14 +5,15 @@ This module contains the class for all M-Pesa transactions.
 """
 
 from .open_api import APIContext, APIMethodType, APIRequest
+from .constants import *
 
-BASE_URL = 'openapi.m-pesa.com'
-get_session_url = '/sandbox/ipg/v2/vodacomTZN/getSession/'
-c2bPayment_url = '/sandbox/ipg/v2/vodacomTZN/c2bPayment/singleStage/'
-reversal_url = '/sandbox/ipg/v2/vodacomTZN/reversal/'
-b2cPayment_url = '/sandbox/ipg/v2/vodacomTZN/b2cPayment/'
-b2bPayment_url = '/openapi/ipg/v2/vodacomTZN/b2bPayment/'
-transaction_status_url = '/openapi/ipg/v2/vodacomTZN/queryTransactionStatus/'
+BASE_URL = MPESA_BASE_URL
+get_session_url = MPESA_GET_SESSION_URL
+c2bPayment_url = MPESA_C2BPAYMENT_URL
+reversal_url = MPESA_REVERSAL_URL
+b2cPayment_url = MPESA_B2CPAYMENT_URL
+b2bPayment_url = MPESA_B2BPAYMENT_URL
+transaction_status_url = MPESA_TRANSACTION_STATUS_URL
 
 
 class MPESA:
@@ -87,7 +88,8 @@ class MPESA:
         else:
             return response
 
-    def customer2business(self, parameters: dict, path: str = c2bPayment_url) -> dict:
+    def customer2business(self, parameters: dict,
+                          path: str = c2bPayment_url) -> dict:
         """A standard customer-to-business transaction
 
         :param parameters: A dictionary containing all necessary
@@ -157,7 +159,8 @@ class MPESA:
         response = self._get_api_response(self.context)
         return response
 
-    def business2customer(self, parameters: dict, path: str = b2cPayment_url) -> dict:
+    def business2customer(self, parameters: dict,
+                          path: str = b2cPayment_url) -> dict:
         """A standard customer-to-business transaction.
 
         :param parameters: Information required for successful transaction.
@@ -192,7 +195,8 @@ class MPESA:
         response = self._get_api_response(self.context)
         return response
 
-    def business2business(self, parameters: dict, path: str = b2bPayment_url) -> dict:
+    def business2business(self, parameters: dict,
+                          path: str = b2bPayment_url) -> dict:
         """Business-to-business transactions (Single Stage).
 
         :param parameters: Information necessary for business-to-business
