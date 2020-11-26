@@ -3,8 +3,8 @@ site_name: Mobile Payments
 theme: readthedocs
 
 nav:
-    - Introduction: index.md
-    - Vodacom M-Pesa: vodacom.md
+  - Introduction: index.md
+  - Vodacom M-Pesa: vodacom.md
 
 repo_url: https://github.com/ZendaInnocent/mobile-payments.git
 
@@ -12,6 +12,9 @@ repo_name: GitHub
 
 site_description: An easy way to integrate mobile payments into your web project.
 
+markdown_extensions:
+  - admonition
+
 site_author: Innocent Zenda
 
-copyright: Innocent Zenda - 2020
+copyright: Copyright &copy; 2020 Innocent Zenda.
