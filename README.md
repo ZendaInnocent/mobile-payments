@@ -1,7 +1,9 @@
 # Mobile Payments
+
 An easy way to integrate mobile payments into your web project.
 
 ## Motivation
+
 Recently, VodaCom has released open API portal for M-Pesa. The following are some issues arose:
 
 For Python integration, they have provided the package in zipped format. It is not user friendly and some developers found it challenging in installation.
@@ -10,9 +12,10 @@ Also, the sample code provided for Python implementation are long and most compr
 
 Mobile Payments package try to resolve above issues for Python by providing easy and user friendly installation, also the refactored code that is simplified.
 
-
 ## Installation
+
 Install the package using `pip`
+
 ```
 pip install mobile-payments
 ```
@@ -31,11 +34,20 @@ To use refactored code import `MPESA` from `vodacom` module.
 from mobile_payments.vodacom import MPESA
 ```
 
-
 ## Prerequisites
+
 Python 3.6+
 
+## Features
+
+- [x] Customer-to-business
+- [x] Business-to-customer
+- [x] Business-to-business
+- [x] Reversal
+- [x] Transaction status
+
 ## Examples
+
 The following examples requires `api key`. It can be obtained by registering to [open api portal](https://openapiportal.m-pesa.com) and follow the instructions.
 
 It also uses refactored code, if you want to use original open API code it is also possible but follow the examples in documentation.
@@ -76,6 +88,7 @@ Sample response
 ```
 
 # Integrating in Django
+
 If doing web project using Django framework
 
 ```python
@@ -109,7 +122,9 @@ def payments(request):
                 # unsuccessful transaction
 
 ```
+
 More details on response codes, see [api documentation](https://openapiportal.m-pesa.com/api-documentation)
 
 ## License
+
 Code released under [MIT LICENSE](https://github.com/ZendaInnocent/mobile-payments/blob/main/LICENSE)
