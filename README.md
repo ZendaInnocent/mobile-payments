@@ -54,7 +54,7 @@ It also uses refactored code, if you want to use original open API code it is al
 
 ### Customer to Business payment via vodacom m-pesa
 
-```
+```python
 # vodacom M-PESA
 from mobile_payments.vodacom import MPESA
 
