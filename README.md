@@ -12,9 +12,14 @@ Also, the sample code provided for Python implementation are long and most compr
 
 Mobile Payments package try to resolve above issues for Python by providing easy and user friendly installation, also the refactored code that is simplified.
 
+## Prerequisites
+
+Python 3.6+
+Pip
+
 ## Installation
 
-Install the package using `pip`
+This package is available in [Python Package Index](https://pypi.org/project/mobile-payments/) and can be installed using `pip`
 
 ```
 pip install mobile-payments
@@ -34,17 +39,22 @@ To use refactored code import `MPESA` from `vodacom` module.
 from mobile_payments.vodacom import MPESA
 ```
 
-## Prerequisites
-
-Python 3.6+
-
 ## Features
+
+Ready methods
 
 - [x] Customer-to-business
 - [x] Business-to-customer
 - [x] Business-to-business
 - [x] Reversal
 - [x] Transaction status
+
+## Requisites
+
+The following are required and are obtained from [Vodacom Open Api portal](https://openapiportal.m-pesa.com/login)
+
+- Api Key
+- Public Key
 
 ## Examples
 
@@ -87,7 +97,7 @@ Sample response
 'output_ConversationID': 'c9e794e10c63479992a8b08703abeea36', 'output_ThirdPartyConversationID': 'asv02e5958774f7ba228d83d0d689761'}}
 ```
 
-# Integrating in Django
+## Integrating in Django
 
 If doing web project using Django framework
 
