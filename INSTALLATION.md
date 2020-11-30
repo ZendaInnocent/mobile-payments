@@ -71,7 +71,7 @@ You can check the information for virtual environment using
 poetry env info
 ```
 
-The samle result of the command
+The sample result of the command
 
 ```
 Virtualenv
