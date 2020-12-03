@@ -1,10 +1,10 @@
-from enum import Enum
 import json
+from base64 import b64decode, b64encode
+from enum import Enum
 
 import requests
-from base64 import b64decode, b64encode
-from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_v1_5 as Cipher_PKCS1_v1_5
+from Crypto.PublicKey import RSA
 
 
 class APIRequest:
