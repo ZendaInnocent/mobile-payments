@@ -4,8 +4,8 @@ vodacom.py
 This module contains the class for all M-Pesa transactions.
 """
 
-from .open_api import APIContext, APIMethodType, APIRequest
 from .constants import *
+from .open_api import APIContext, APIMethodType, APIRequest
 
 BASE_URL = MPESA_BASE_URL
 get_session_url = MPESA_GET_SESSION_URL
@@ -231,8 +231,8 @@ class MPESA:
         response = self._get_api_response(self.context)
         return response
 
-    def query_transaction_status(self, parameters: dict,
-                                 path: str = transaction_status_url) -> dict:
+    def status(self, parameters: dict,
+               path: str = transaction_status_url) -> dict:
         """Query the status of the transaction that has been initiated.
 
         :param parameters: Information necessary for querying
