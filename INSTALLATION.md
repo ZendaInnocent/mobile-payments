@@ -28,6 +28,15 @@ All configuration can be seen by running
 poetry config --list
 ```
 
+You will get result like this
+
+```
+cache-dir = "/path/to/cache/directory"
+virtualenvs.create = true
+virtualenvs.in-project = null
+virtualenvs.path = "{cache-dir}/virtualenvs"  # /path/to/cache/directory/virtualenvs
+```
+
 Poetry creates new virtual environment if one doesn't exists already and placed in other directory other than the project's directory. I prefer to have a virtual environment in the project directory.
 
 You can change this behaviour by running
