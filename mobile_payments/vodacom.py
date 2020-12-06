@@ -4,7 +4,7 @@ vodacom.py
 This module contains the class for all M-Pesa transactions.
 """
 
-from .constants import *
+from .defaults import *
 from .open_api import APIContext, APIMethodType, APIRequest
 
 BASE_URL = MPESA_BASE_URL
